@@ -11,10 +11,10 @@ const Nav = () => {
           <Link exact to="/" className="subnav-link">Introduction</Link>
           <Link exact to="/" className="subnav-link">History</Link>
         </SubNav>
-        <NavLink exact to="/styles" className="nav-link" activeClassName="is-active">Styles</NavLink>
+        <NavLink exact to="/styles/colors" className="nav-link" activeClassName="is-active">Styles</NavLink>
         <SubNav>
-          <Link exact to="/colors" className="subnav-link">Colors</Link>
-          <Link exact to="/icons" className="subnav-link">Icons</Link>
+          <Link exact to="/styles/colors" className="subnav-link">Colors</Link>
+          <Link exact to="/styles/icons" className="subnav-link">Icons</Link>
         </SubNav>
         <NavLink exact to="/components" className="nav-link" activeClassName="is-active">Components</NavLink>
         <SubNav>

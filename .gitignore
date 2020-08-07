@@ -2,6 +2,6 @@
 
 /package-lock.json
 
-/www/public/assets
-/www/public/data
+/www/public
 /www/src/assets
+/www/src/data
