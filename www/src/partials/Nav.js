@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = () => {
+
   return (
     <SideNav>
       <div className="nav">
@@ -28,6 +29,7 @@ const Nav = () => {
 
 const SideNav = styled.nav`
   position: sticky;
+  top: 50px;
   width: 15%;
   height: calc(100vh - 50px);
   background-color: #f7f7f7;

@@ -12,7 +12,7 @@ class Header extends Component {
         </Link>
         <Nav>
           <NavLink exact to="/" className="nav-link" activeStyle={{color: "white"}}>Home</NavLink>
-          <NavLink exact to="/styles" className="nav-link" activeStyle={{color: "white"}}>Styles</NavLink>
+          <NavLink exact to="/styles/colors" className="nav-link" activeStyle={{color: "white"}}>Styles</NavLink>
           <NavLink exact to="/components" className="nav-link" activeStyle={{color: "white"}}>Components</NavLink>
         </Nav>
       </HeaderTemplate>
@@ -22,6 +22,7 @@ class Header extends Component {
 
 const HeaderTemplate = styled.header`
   position: sticky;
+  top: 0;
   min-height: 50px;
   background: #20232a;
 `;
