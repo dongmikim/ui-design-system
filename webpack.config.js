@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'www/build'),
+    path: path.resolve(__dirname, 'www/build'), //빌드 결과물
     publicPath: '/'
   },
   module: {
@@ -61,7 +61,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'www/src'),
     publicPath: '/',
-    open: true,
+    // open: true,
     hot: true,
     inline: true,
     overlay: true,
