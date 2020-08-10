@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import Input from '~/Input';
 import InputFile from '~/InputFile';
+import Textarea from '~/InputTextarea';
 
 class InputExample extends Component {
   constructor(props) {

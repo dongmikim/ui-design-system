@@ -58,17 +58,17 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    historyApiFallback: true,
+    // historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'www/src'),
     publicPath: '/',
-    open: true,
-    hot: true,
-    inline: true,
-    overlay: true,
+    // open: true,
+    // hot: true,
+    // inline: true,
+    // overlay: true,
     port: 9000,
     host: "localhost",
     after: function(app, server) {
-      app.listen(9000, function() {
+      app.listen(3000, function() {
         console.log(`Webpack dev server is listening on port 9000`);
       })
     }
