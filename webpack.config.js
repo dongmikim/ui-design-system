@@ -58,13 +58,13 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    // historyApiFallback: true,
+    historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'www/src'),
     publicPath: '/',
     // open: true,
-    // hot: true,
-    // inline: true,
-    // overlay: true,
+    hot: true,
+    inline: true,
+    overlay: true,
     port: 9000,
     host: "localhost",
     after: function(app, server) {
