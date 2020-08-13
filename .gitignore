@@ -3,5 +3,6 @@
 /package-lock.json
 
 /www/public
+/www/build
 /www/src/assets
 /www/src/data

@@ -1,0 +1,172 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 12px;
+  color: $white;
+  transition: background-color .15s ease-in-out,border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  cursor: pointer;
+
+    &:not(:disabled):hover,
+  &:not(.is-disabled):hover {
+    border-color: $primary;
+    color: $primary;
+  }
+  
+  &:active {
+    border-color: #2E2AAA;
+    color: #2E2AAA;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    cursor: not-allowed;
+    border-color: #DDDEE5;
+    color: #C1C1C6;
+  }
+}
+
+// button height size 
+.btn-xs {
+  height: 21px;
+  font-size: 11px;
+}
+
+.btn-sm {
+  height: 25px;
+  font-size: 11px;
+}
+
+.btn-md {
+  height: 29px;
+}
+
+.btn-lg {
+  height: 35px;
+}
+
+// button width size 
+.btn-sm-w {
+  min-width: 60px;
+}
+
+.btn-md-w {
+  min-width: 80px;
+}
+
+.btn-lg-w {
+  min-width: 110px;
+}
+
+.btn {
+  background-color: $white;
+  border: 1px solid $gray-500;
+  color: #343646;
+
+  &.ml-1 {
+    margin-left: 3px !important;
+  }
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: #2E2AAA;
+  color: $white;
+
+    &:not(:disabled):hover,
+  &:not(.is-disabled):hover {
+    background-color: #5450E1;
+    color: $white;
+  }
+
+  &:active {
+    color: $white;
+    background-color: #2E2AAA;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: #C2C1F4;
+    border-color :#BDBBE4;
+    color: $white;
+  }
+}
+
+.btn-blue {
+  background-color: #306FFD;
+  border-color: #033DD5;
+  color: $white;
+
+    &:not(:disabled):hover,
+  &:not(.is-disabled):hover {
+    background-color: #457EFD;
+    color: $white;
+  }
+
+  &:active {
+    background-color: #033DD5;
+    color: $white;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: #C1D4FE;
+    border-color :#B4C5F2;
+    color: $white;
+  }
+
+  i {
+    color: $white;
+  }
+}
+
+.btn-dark {
+  background-color: #393B4C;
+  border-color: #111119;
+  color: $white;
+
+  &:not(:disabled):hover,
+  &:not(.is-disabled):hover {
+    color: $white;
+    background-color: #434659;
+    border-color: #1B1C26;
+  }
+
+  &:active {
+    background-color: #111119;
+    color: $white;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: #C4C5CA;
+    border-color :#B8B8BA;
+    color: $white;
+  }
+}
+
+
+.btn-wrapper {
+  display: flex;
+  margin-right: -1.5px;
+  margin-left: -1.5px;
+
+  & > * {
+    margin-right: 1.5px;
+    margin-left: 1.5px;
+  }
+}
+
+.btn-ico {
+  width: 29px;
+  padding: 0;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}

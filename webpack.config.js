@@ -61,7 +61,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'www/src'),
     publicPath: '/',
-    // open: true,
+    open: true,
     hot: true,
     inline: true,
     overlay: true,

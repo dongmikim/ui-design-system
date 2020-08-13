@@ -8,34 +8,33 @@ class Input extends Component {
     }
   }
 
-  handleChange() {
+  _onChange = e => {
+    let { value } = e.target;
     this.setState({
-      value: this.state.value
+      value: value
     })
+
+    this.props.onChange(e, value);
   }
 
   render() {
-    const {
-      className,
-      name,
-      required,
-      size,
-      maxLength,
-      value,
-      placeholder } = this.props;
+    const { id, name, required, className, maxLength, placeholder, style, readOnly } = this.props;
+    const { value } = this.state;
 
     return (
       <input type="text" 
+        id={id}
         className={className}
         name={name}
         required={required}
-        size={size}
         maxLength={maxLength}
         value={value}
+        style={style}
+        readOnly={readOnly}
         placeholder={placeholder}
         onBlur={this.handleBlur}
         onKeyDown={this.handleKeyDown}
-        onChange={this.handleChange} />
+        onChange={this._onChange} />
     )
   }
 }
@@ -48,7 +47,7 @@ Input.defaultProps = {
   maxLength: 100,
   placeholder: 'placeholder',
   value: '',
-  handleChange: () => {},
+  onChange: () => {},
   handleBlur: () => {},
   handleKeyDown: () => {}
 }

@@ -27,10 +27,14 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "classnames": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-element-to-jsx-string": "^14.3.1",
     "react-router-dom": "^5.2.0",
+    "react-syntax-highlighter": "^13.3.1",
     "styled-components": "^5.1.1",
     "webpack-dev-server": "^3.11.0"
   }

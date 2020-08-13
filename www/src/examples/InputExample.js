@@ -12,7 +12,7 @@ class InputExample extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <div className="contents-header">
           <h1 className="contents-title">Forms</h1>
           <p></p>
@@ -20,8 +20,9 @@ class InputExample extends Component {
         <div>
           <Input />
           <InputFile />
+          <Textarea />
         </div>
-      </>
+      </div>
     )
   }
 }

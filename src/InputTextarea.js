@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from '~/assets/styles/style.scss';
 
 class Textarea extends Component {
   constructor(props) {
@@ -34,12 +35,13 @@ class Textarea extends Component {
   }  
 
   render() {
-    const { id, name, required, rows, maxLength, placeholder, style, readOnly } = this.props;
+    const { id, name, required, rows, className, maxLength, placeholder, style, readOnly } = this.props;
     const { value } = this.state;
 
     return (
       <textarea id={id}
         name={name}
+        className={className}
         required={required}
         rows={rows}
         maxLength={maxLength}
@@ -58,6 +60,7 @@ class Textarea extends Component {
 Textarea.defaultProps = {
   id: 'textarea',
   name: 'textarea',
+  className: 'textarea',
   required: false,
   rows: 5,
   maxLength: null,
@@ -68,7 +71,6 @@ Textarea.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
   onKeyDown: () => {},
-  formatClassname: (classnames) => formatClassname(styles, classnames)
 }
 
 export default Textarea;
