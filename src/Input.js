@@ -46,6 +46,7 @@ Input.defaultProps = {
   required: false,
   maxLength: 100,
   placeholder: 'placeholder',
+  readOnly: false,
   value: '',
   onChange: () => {},
   handleBlur: () => {},

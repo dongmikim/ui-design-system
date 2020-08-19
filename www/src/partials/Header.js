@@ -21,10 +21,22 @@ class Header extends Component {
 }
 
 const HeaderTemplate = styled.header`
+  z-index: 10;
+  display: flex;
+  align-items: center;
   position: sticky;
   top: 0;
   min-height: 50px;
+  padding-right: 30px;
+  padding-left: 30px;
   background: #20232a;
+
+  .header-logo {
+    margin-right: 20px;
+    color: orange;
+    font-weight: bold;
+    font-size: 18px;
+  }
 `;
 
 const Nav = styled.div`
@@ -34,6 +46,7 @@ const Nav = styled.div`
   .nav-link {
     display: block;
     padding: 5px 10px;
+    font-size: 14px;
   }
 `;
 

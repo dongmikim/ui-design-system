@@ -1,4 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-ReactDOM.render(<div>Hello React</div>, document.getElementById('root'));
+export { default as Button } from './Button';
+export { default as Input } from './Input';
+export { default as InputFile } from './InputFile';

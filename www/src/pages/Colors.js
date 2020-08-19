@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import PageTemplate from '../partials/PageTemplate';
+import PageHeader from '../partials/PageHeader';
 
 class Colors extends Component {
   constructor(props) {
@@ -30,11 +32,8 @@ class Colors extends Component {
   render() {
     
     return (
-      <>
-        <div className="contents-header">
-          <h2 className="contents-title">Colors</h2>
-          <p className="contents-desc">공통 컬러 정의</p>
-        </div>
+      <PageTemplate>
+        <PageHeader title="Colors" desc="공통 컬러 정의" />
 
         <div className="colors">
           <div>
@@ -58,7 +57,7 @@ class Colors extends Component {
                           <tr>
                             <th className="color-code">Hex</th>
                             <td className="color-code">
-                              #{content.hex}
+                              <textarea readOnly value={`#${content.hex}`} />
                             </td>
                           </tr>
                         </tbody>
@@ -72,7 +71,7 @@ class Colors extends Component {
             }
           </div>
         </div>
-      </>
+      </PageTemplate>
     )
   }
 }
