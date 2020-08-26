@@ -7,17 +7,7 @@ import Layout from "../components/layout"
 export default function IndexPage({ data }) {
   return (
     <Layout>
-    {/* <SEO title="Home" /> */}
-    <div>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <h3>{node.frontmatter.title}{" "}</h3>
-          <div>
-            {node.excerpt}
-          </div>
-        </div>
-      ))}
-    </div>
+    sd
  
   </Layout>
   )
