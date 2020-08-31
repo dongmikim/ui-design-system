@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
@@ -12,19 +11,3 @@ export default function IndexPage({ data }) {
   </Layout>
   )
 }
-
-export const query = graphql`
-query {
-  allMarkdownRemark {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-        }
-        excerpt
-      }
-    }
-  }
-}
-`;
