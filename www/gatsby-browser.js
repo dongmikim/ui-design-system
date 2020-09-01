@@ -19,7 +19,7 @@ import {
 import { preToCodeBlock } from "mdx-utils";
 import { useMDXScope } from "gatsby-plugin-mdx/context";
 
-export const Code = ({ codeString, language, ...props }) => {
+const Code = ({ codeString, language, ...props }) => {
     const components = useMDXScope()
   if (props["react-live"]) {
     return (

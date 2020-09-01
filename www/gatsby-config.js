@@ -7,6 +7,22 @@ module.exports = {
     author: `@Kim dong mi`,
   },
   plugins: [
+    {
+    resolve: `gatsby-plugin-mdx`,
+    options: {
+      defaultLayouts: {
+        default: require.resolve("./src/components/layout.js"),
+      },
+    },
+  },
+  {
+    resolve: 'gatsby-plugin-root-import',
+    options: {
+      src: path.join(__dirname, 'src'),
+      pages: path.join(__dirname, 'src/pages'),
+      ui: path.join(__dirname, 'src/ui'),
+    }
+  },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -15,22 +31,7 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-root-import',
-      options: {
-        src: path.join(__dirname, 'src'),
-        pages: path.join(__dirname, 'src/pages'),
-        ui: path.join('../../../../', 'src'),
-      }
-    },
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-remark`,
