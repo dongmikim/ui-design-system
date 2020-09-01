@@ -1,20 +1,54 @@
-import Button from "../../../../src/Button.js";
+import Button from "ui/Button.js";
+import Preview from "src/components/Preview.js";
+import ButtonColors from "src/examples/Button/Colors.js";
+import ButtonSizes from "src/examples/Button/Sizes.js";
+import ButtonDisabled from "src/examples/Button/Disabled.js";
 
 # Button
 
 ## Color
 
-```jsx react-live
+<Preview >
+  <ButtonColors />
+</Preview>
+
+```jsx 
+<Button text="button" />
 <Button color="primary" text="button" />
+<Button color="blue" text="button" />
 ```
 
 ## Size
 
-```jsx react-live
-<Button size="sm" text="button" />
+<Preview >
+  <ButtonSizes />
+</Preview>
+
+```jsx 
+<Button size="xs" text="Xsmall" />
+<Button size="sm" text="Small" />
+<Button text="Medium" />
+<Button size="lg" text="Large" />
+<Button width="sm" text="MinWidth Small" />
+<Button width="md" text="MinWidth Medium" />
+<Button width="lg" text="MinWidth Large" />
 ```
 
+## Disabled
+
+<Preview >
+  <ButtonDisabled />
+</Preview>
+
 ```jsx
-<div>frist</div>
-<div>second</div>
+<Button text="Disabled" disabled />
 ```
+
+## API
+| Name     | Type    | Default | Description |
+|----------|---------|---------|-------------|
+| block    | boolean | false   |             |
+| color    | string  |         |             |
+| disabled | boolean | false   |             |
+| size     | string  |         |             |
+| type     |         | button  |             |

@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `UI DESIGN`,
@@ -20,6 +22,14 @@ module.exports = {
           default: require.resolve("./src/components/layout.js"),
         },
       },
+    },
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: path.join(__dirname, 'src'),
+        pages: path.join(__dirname, 'src/pages'),
+        ui: path.join('../../../../', 'src'),
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

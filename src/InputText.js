@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import classNames from "classnames";
+import './assets/styles/style.scss';
 
-class Input extends Component {
+class InputText extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,18 +20,24 @@ class Input extends Component {
   }
 
   render() {
-    const { id, name, required, className, maxLength, placeholder, style, readOnly } = this.props;
+    const { prefix, id, name, required, className, maxLength, placeholder, readOnly, disabled } = this.props;
     const { value } = this.state;
+
+    const classes = classNames(
+      prefix && `${prefix}`, 
+      className,
+      { disabled: disabled }
+    );
 
     return (
       <input type="text" 
         id={id}
-        className={className}
+        className={classes}
         name={name}
         required={required}
         maxLength={maxLength}
         value={value}
-        style={style}
+        disabled={disabled}
         readOnly={readOnly}
         placeholder={placeholder}
         onBlur={this.handleBlur}
@@ -39,8 +47,9 @@ class Input extends Component {
   }
 }
 
-Input.defaultProps = {
-  className: '',
+InputText.defaultProps = {
+  prefix: 'form-control',
+  disabled: false,
   name: 'input',
   size: 10,
   required: false,
@@ -53,4 +62,4 @@ Input.defaultProps = {
   handleKeyDown: () => {}
 }
 
-export default Input;
+export default InputText;

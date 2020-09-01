@@ -1,0 +1,48 @@
+.form-control {
+  display: block;
+  width: 100%;
+  height: $input-height;
+  padding: 8px 22px 8px 10px;
+  background-clip: padding-box;
+  // line-height: 20px; textarea
+  background-color: $input-bg;
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  text-overflow: ellipsis;
+
+  &.no-radius {
+    border-radius: 0;
+  }
+
+  &::placeholder {
+   color: $input-placeholder-color;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $input-focus-border;
+  }
+
+  &:disabled {
+    background-color: $input-disabled-bg;
+    color: $input-disabled-color;
+    cursor: not-allowed;
+  }
+  
+  &:disabled::placeholder {
+    color: $input-disabled-color;
+  }
+}
+
+textarea {
+  height: 100%;
+  line-height: 1.5;
+  resize: none;
+
+  &.is-disabled {
+    background-color: $input-disabled-bg !important;
+    border-color: $input-border !important;
+    color: $input-color !important;
+  }
+}

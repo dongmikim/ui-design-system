@@ -23,7 +23,7 @@ class Button extends Component {
     const classes = classNames(
       prefix && `${prefix}`, 
       size ? `${prefix}-${size}` : false,
-      width ? `${prefix}-${size}` : false,
+      width ? `${prefix}-w-${width}` : false,
       color ? `${prefix}-${color}` : false,
       block ? "btn-block" : false,
       className,
