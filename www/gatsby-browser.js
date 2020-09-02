@@ -24,8 +24,8 @@ const Code = ({ codeString, language, ...props }) => {
   if (props["react-live"]) {
     return (
       <LiveProvider code={codeString.trim()} scope={components}>
-        <LivePreview />
-        <LiveEditor />
+        <LivePreview style={{padding:"8px 12px", border: "2px solid rgba(0,0,0,0.1", borderRadius: "4px"}} />
+        <LiveEditor style={{background:"#000", padding:"4px 8px"}}/>
         <LiveError />
       </LiveProvider>
     );

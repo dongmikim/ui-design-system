@@ -19,6 +19,7 @@ const Nav = () => (
       <Link exact to="/components" className="nav-link" activeClassName="is-active">Components</Link>
       <SubNav>
         <Link to="/components/buttons" className="subnav-link" activeClassName="is-active">Buttons</Link>
+        <Link to="/components/inputs" className="subnav-link" activeClassName="is-active">Inputs</Link>
         <Link to="/components/forms" className="subnav-link" activeClassName="is-active">Forms</Link>
       </SubNav>
     </div>
