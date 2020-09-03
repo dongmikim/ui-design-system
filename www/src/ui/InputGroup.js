@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from "classnames";
 import InputText from "./InputText";
+import InputGroupText from "./InputGroupText";
 import './styles/style.scss';
 
 class InputGroup extends Component {
@@ -11,27 +12,31 @@ class InputGroup extends Component {
     }
   }
 
-
+  
   render() {
-    const { prefix, id, label, size, className } = this.props;
+    const { prefix, id, label, size, className, placeholder, disabled } = this.props;
     const { value } = this.state;
 
+    const labelAppend = this.props.labelAppend;
+    
     const classes = classNames(
       prefix && `${prefix}`, 
-      size ? `${prefix}-${size}` : false,
+      size ? `form-control-${size}` : false,
       className
     );
 
     return (
-      <div className="input-group">
-        <div className="input-label">
-          <label for={id}>{label}</label>
-        </div>
-        <InputText id={id} />
-      </div>
+      <>
+        {!labelAppend ?
+         <div className="input-group"><InputGroupText label={label} /><InputText id={id} size={size} placeholder={placeholder} disabled={disabled} /></div>
+          : <div className="input-group"><InputText id={id} size={size} /><InputGroupText label={label} position="append" placeholder={placeholder} disabled={disabled} /></div> }
+      </>
     )
   }
 }
 
+InputGroup.defaultProps = {
+  label: 'label'
+}
 
 export default InputGroup;

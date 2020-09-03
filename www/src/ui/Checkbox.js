@@ -6,10 +6,10 @@ const Checkbox = (props) => {
   const { ...inputProps } = props;
 
   return (
-    <div className="checkbox">
-      <input id={props.id} type="checkbox" {...inputProps} />
-      <label htmlFor={props.id}>{props.label}</label>
-      <span title={props.label}>{props.label}</span>
+    <div className="form-check">
+      <input id={props.id} type="checkbox" className="form-check-input" {...inputProps} />
+      <label htmlFor={props.id} className="form-check-label">{props.label}</label>
+      {/* <span title={props.label}>{props.label}</span> */}
     </div>
   )
 }

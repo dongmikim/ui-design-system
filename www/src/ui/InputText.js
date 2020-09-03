@@ -20,7 +20,7 @@ class InputText extends Component {
   }
 
   render() {
-    const { prefix, id, name, size, required, className, maxLength, placeholder, readOnly, disabled } = this.props;
+    const { type, prefix, id, name, size, required, className, maxLength, placeholder, readOnly, disabled } = this.props;
     const { value } = this.state;
 
     const classes = classNames(
@@ -31,7 +31,7 @@ class InputText extends Component {
     );
 
     return (
-      <input type="text" 
+      <input type={type} 
         id={id}
         className={classes}
         name={name}
@@ -49,13 +49,14 @@ class InputText extends Component {
 }
 
 InputText.defaultProps = {
+  type: 'text',
   prefix: 'form-control',
   disabled: false,
   name: 'input',
   size: '',
   required: false,
   maxLength: 100,
-  placeholder: 'placeholder',
+  placeholder: '',
   readOnly: false,
   value: '',
   onChange: () => {},

@@ -16,11 +16,11 @@ const Nav = () => (
         <Link to="/styles/colors" className="subnav-link" activeClassName="is-active">Colors</Link>
         <Link to="/styles/icons" className="subnav-link" activeClassName="is-active">Icons</Link>
       </SubNav>
-      <Link exact to="/components" className="nav-link" activeClassName="is-active">Components</Link>
+      <Link exact to="/components/buttons" className="nav-link" activeClassName="is-active">Components</Link>
       <SubNav>
         <Link to="/components/buttons" className="subnav-link" activeClassName="is-active">Buttons</Link>
-        <Link to="/components/inputs" className="subnav-link" activeClassName="is-active">Inputs</Link>
         <Link to="/components/forms" className="subnav-link" activeClassName="is-active">Forms</Link>
+        <Link to="/components/input-group" className="subnav-link" activeClassName="is-active">Input Group</Link>
       </SubNav>
     </div>
   </NavTemplate>

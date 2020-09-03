@@ -10,3 +10,155 @@ textarea {
     color: $input-color !important;
   }
 }
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+// checkbox
+
+$form-check-input-gutter: 14px;
+$form-check-indicator-size: 7px;
+$form-radio-input-gutter: 16px;
+
+input[type="checkbox"],
+input[type="radio"] {
+  position: absolute;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden; 
+}
+
+.form-check {
+  display: inline-flex;
+  padding-left: $form-check-input-gutter;
+}
+
+.form-check-label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: $form-check-input-gutter;
+    height: $form-check-input-gutter;
+  }
+  &::before {
+    top: -($form-check-indicator-size + $form-check-input-gutter) / 2;
+    left: -$form-check-input-gutter;
+    pointer-events: none;
+    border-radius: 3px;
+    background-color: $white;
+    border: 1px solid #C2C5D6;
+  }
+
+  &::after {
+    content: '\e90c';
+    display: block;
+    top: -($form-check-indicator-size + $form-check-input-gutter) / 2;
+    left: -($form-check-input-gutter / 2 + $form-check-indicator-size);
+    font-family: 'icon';
+    color: #306FFD;
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+.form-check-input:checked + .form-check-label::after {
+    opacity: 1;
+}
+
+.form-check-input:disabled {
+  cursor: not-allowed;
+}
+
+.form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  color: #C1C1C6;
+
+  &::before {
+    background-color: #F0F0F5;
+  }
+
+  &::after {
+    color: #C1C1C6;
+  }
+}
+
+.form-check-text {
+  // padding-left: -($form-check-input-gutter + 5px); 
+  height: 29px;
+  padding-left: 19px;
+  
+  .form-check-label::before {
+    top: 8px;
+    left: -($form-check-input-gutter + 5px); 
+  }
+
+  .form-check-label::after {
+    top: 9px;
+    left: -($form-check-input-gutter + 5px); 
+  }
+}
+
+// file
+
+
+input[type=file] {
+  position: absolute;
+  width: 100%;
+  height: 29px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+
+  & + label {
+    cursor: pointer;
+  }
+}
+
+.form-file {
+  display: inline-block;
+  position: relative;
+  width: 270px;
+  height: 29px;
+
+  label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 29px;
+    padding-right: 64px;
+    padding-left: 10px;
+    background-color: #F0F0F5;
+    border: 1px solid #C2C5D6;
+    border-radius: 2px;
+    line-height: 29px;
+    color: #C1C1C6;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+
+    &::after {
+      content: '업로드';
+      position: absolute;
+      top: -1px;
+      right: -1px;
+      height: 29px;
+      padding-right: 15px;
+      padding-left: 15px;
+      background-color: #393B4C;
+      border: 1px solid #111119;
+      border-radius: 0 2px 2px 0;
+      color: $white;
+      line-height: 27px;
+    }
+  }
+}

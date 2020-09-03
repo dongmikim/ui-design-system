@@ -1,12 +1,41 @@
+import FormGroup from "ui/FormGroup.js";
 import InputText from "ui/InputText.js";
-import InputTextArea from "ui/InputTextArea.js";
+import InputFile from "ui/InputFile.js";
 import Checkbox from "ui/Checkbox.js";
-import Preview from "src/components/Preview.js";
 
 # Forms
 
+
+```jsx react-live
+<form>
+  <FormGroup id="email" type="email" label="Email" />
+  <FormGroup id="password" type="password" label="Password" />
+  <Button type="submit" color="primary" text="Submit" />
+</form>
+```
+
+## Input Sizes
+
+```jsx react-live
+<>
+<InputText size="sm" />
 <InputText />
+<InputText size="lg" />
+</>
+```
 
-<InputTextArea />
+## InputFile
 
-<Checkbox />
+```jsx react-live
+<form>
+  <InputFile />
+</form>
+```
+
+## Checkbox
+
+```jsx react-live
+<form>
+  <Checkbox />
+</form>
+```

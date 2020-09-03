@@ -1,0 +1,38 @@
+import InputText from "ui/InputText.js";
+import InputGroup from "ui/InputGroup.js";
+
+# InputGroup
+
+```jsx react-live
+<>
+<InputGroup label="부서" />
+<InputGroup label="%" labelAppend />
+</>
+```
+
+## Sizes
+
+```jsx react-live
+<div style={{display: "block"}}>
+<InputGroup label="Small" size="sm" />
+<InputGroup label="Default" />
+<InputGroup label="Large" size="lg" />
+</div>
+```
+
+## Disabled
+
+```jsx react-live
+<>
+<InputGroup label="Default" placeholder="placeholder" disabled />
+</>
+```
+
+## API
+| Name     | Type    | Default | Description |
+|----------|---------|---------|-------------|
+| label    | string |    |             |
+| labelAppend    | boolean  | false        |             |
+| disabled | boolean | false   |             |
+| size     | string  |         |             |
+| placeholder    | string |   |             |

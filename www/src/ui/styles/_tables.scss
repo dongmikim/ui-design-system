@@ -1,0 +1,45 @@
+$table-accent-bg: #688ace;
+$table-cell-padding: 2px 10px;
+$table-border: #CACCDB;
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  // border: 1px solid $table-border;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: $dark-400;
+    border: 1px solid $table-border;
+  }
+
+  th {
+    font-weight: $font-weight-bold;
+    background-color: #E8E9F0;
+  }
+
+  th {
+    height: 32px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #878BA1;
+  }
+
+  td {
+    height: 37px;
+    background-color: $white;
+  }
+
+  tr.is-selected td {
+    background-color: #403cdd !important;
+    color: #fff;
+  }
+
+  &.cursor-pointer td {
+    cursor: pointer;
+  }
+}

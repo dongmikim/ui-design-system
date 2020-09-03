@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'icon';
+  src:
+    url('./icon.ttf?qldftb') format('truetype'),
+    url('./icon.woff?qldftb') format('woff'),
+    url('./icon.svg?qldftb#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  font-family: 'icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico-slide-prev:before {
+  content: "\e920";
+}
+.ico-slide-next:before {
+  content: "\e921";
+}
+.ico-lock:before {
+  content: "\e91a";
+}
+.ico-user:before {
+  content: "\e91b";
+}
+.ico-qustion-circle:before {
+  content: "\e91c";
+}
+.ico-exclamation-circle:before {
+  content: "\e91d";
+}
+.ico-times-circle:before {
+  content: "\e91e";
+}
+.ico-check-circle:before {
+  content: "\e91f";
+}
+.ico-paging-prev:before {
+  content: "\e918";
+}
+.ico-paging-next:before {
+  content: "\e919";
+}
+.ico-ellipsis:before {
+  content: "\e917";
+}
+.ico-exist:before {
+  content: "\e915";
+}
+.ico-none:before {
+  content: "\e916";
+}
+.ico-exclamation-triangle:before {
+  content: "\e900";
+}
+.ico-headset:before {
+  content: "\e901";
+}
+.ico-logout:before {
+  content: "\e902";
+}
+.ico-menu-all:before {
+  content: "\e903";
+}
+.ico-user-circle:before {
+  content: "\e904";
+}
+.ico-folder-download:before {
+  content: "\e905";
+}
+.ico-window-restore:before {
+  content: "\e906";
+}
+.ico-manager:before {
+  content: "\e907";
+}
+.ico-bell:before {
+  content: "\e908";
+}
+.ico-browser-info:before {
+  content: "\e909";
+}
+.ico-calendar:before {
+  content: "\e90a";
+}
+.ico-search:before {
+  content: "\e90b";
+}
+.ico-check:before {
+  content: "\e90c";
+}
+.ico-times:before {
+  content: "\e90d";
+}
+.ico-angle-left:before {
+  content: "\e90e";
+}
+.ico-angle-right:before {
+  content: "\e90f";
+}
+.ico-angle-down:before {
+  content: "\e910";
+}
+.ico-angle-up:before {
+  content: "\e911";
+}
+.ico-code-manager:before {
+  content: "\e912";
+}
+.ico-code-service:before {
+  content: "\e913";
+}
+.ico-desktop-heartbeat:before {
+  content: "\e914";
+}

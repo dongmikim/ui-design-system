@@ -1,0 +1,14 @@
+$font-family-base: 'NotoSans', '맑은 고딕', 'Helvetica', Roboto !default;
+$font-size-base: 12px !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 900 !default;
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+}
+
+.live-preview > * {
+  margin: 4px;
+}

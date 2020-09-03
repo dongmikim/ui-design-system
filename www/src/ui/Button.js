@@ -17,6 +17,8 @@ class Button extends Component {
       block,
       size,
       width,
+      icon,
+      title,
       ...attributes
     } = this.props;
 
@@ -31,7 +33,9 @@ class Button extends Component {
     );
 
     return (
-      <button
+      <>
+      {
+        !icon ?  <button
         type={type} 
         id={id}
         className={classes}
@@ -40,7 +44,20 @@ class Button extends Component {
         {...attributes}
       >
         <span>{text}</span>
-      </button>  
+      </button>
+       : <button
+       type={type} 
+       id={id}
+       className={classes}
+       disabled={disabled}
+       onClick={onClick}
+       {...attributes}
+     >
+       <i title={title} className={icon}>icon</i>
+     </button>  
+      }
+      </>
+  
     )
   }
 }

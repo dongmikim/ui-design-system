@@ -12,13 +12,17 @@ class InputFile extends Component {
   }
 
   render() {
-    const { showFileExtensions } = this.props;
+    const { showFileExtensions, id } = this.props;
     return (
-      <input
-        type="file"
-        accet={showFileExtensions.join(',')}
-        onChange={this.handleChange}
-      />
+      <div className="form-file">
+        <input
+          type="file"
+          id={id}
+          accet={showFileExtensions.join(',')}
+          onChange={this.handleChange}
+        />
+        <label for={id}>filename</label>
+      </div>
     )
   }
 }
