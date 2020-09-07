@@ -11,8 +11,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Nav from "./nav"
+import Toc from "./toc"
 import "../style/style.scss"
-import "../assets/font/style.scss"
+import "./assets/font/style.scss"
+import "./assets/icon/style.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -33,12 +35,13 @@ const Layout = ({ children }) => {
 
         <div className="col">
           <div className="page-wrapper">
-            <main>{children}</main>
-            <footer>
+            <main style={{width: "calc(100% - 180px)"}}>{children}</main>
+            <Toc />
+            {/* <footer>
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+            </footer> */}
           </div>
         </div>
 

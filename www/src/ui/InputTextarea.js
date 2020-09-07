@@ -1,76 +1,79 @@
 import React, { Component } from 'react';
-import style from './styles/style.scss';
+import './styles/style.scss';
 
 class InputTextarea extends Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = {
-      value: this.props.value
-    }
-  }
+		this.state = {
+			value: this.props.value
+		};
+	}
 
-  _onChange = e => {
-    let { value, min, max } = e.target;
+	_onChange = (e) => {
+		let { value, min, max } = e.target;
 
-    this.setState({
-      value: value
-    })
+		this.setState({
+			value: value
+		});
 
-    this.props.onChange(e, value);
-  }
+		this.props.onChange(e, value);
+	};
 
-  _onBlur = e => {
-    this.props.onBlur(e);
-  }
+	_onBlur = (e) => {
+		this.props.onBlur(e);
+	};
 
-  onKeyDown = e => {
-    let keyCode = e.keyCode;
+	onKeyDown = (e) => {
+		let keyCode = e.keyCode;
 
-    this.props.onKeyDown(e);
+		this.props.onKeyDown(e);
 
-    if(keyCode == 13) {
-      this.props.onPressEnter(e);
-    }
-  }  
+		if (keyCode == 13) {
+			this.props.onPressEnter(e);
+		}
+	};
 
-  render() {
-    const { id, name, required, rows, className, maxLength, placeholder, style, readOnly } = this.props;
-    const { value } = this.state;
+	render() {
+		const { id, name, required, rows, className, maxLength, placeholder, style, readOnly } = this.props;
+		const { value } = this.state;
 
-    return (
-      <textarea id={id}
-        name={name}
-        className={className}
-        required={required}
-        rows={rows}
-        maxLength={maxLength}
-        placeholder={placeholder}
-        value={value}
-        style={style}
-        readOnly={readOnly}
-        onChange={this._onChange}
-        onBlur={this._onBlur}
-        onKeyDown={this.onKeyDown}
-      ></textarea>
-    )
-  }
+		return (
+			<textarea
+				id={id}
+				name={name}
+				className={className}
+				required={required}
+				rows={rows}
+				maxLength={maxLength}
+				placeholder={placeholder}
+				value={value}
+				style={style}
+				readOnly={readOnly}
+				onChange={this._onChange}
+				onBlur={this._onBlur}
+				onKeyDown={this.onKeyDown}
+			>
+				{value}
+			</textarea>
+		);
+	}
 }
 
 InputTextarea.defaultProps = {
-  id: 'textarea',
-  name: 'textarea',
-  className: 'textarea',
-  required: false,
-  rows: 5,
-  maxLength: null,
-  placeholder: 'placeholder',
-  value: '',
-  style: {},
+	id: 'textarea',
+	name: 'textarea',
+	className: 'form-control',
+	required: false,
+	rows: 5,
+	maxLength: null,
+	placeholder: 'placeholder',
+	value: '',
+	style: {},
 
-  onChange: () => {},
-  onBlur: () => {},
-  onKeyDown: () => {},
-}
+	onChange: () => {},
+	onBlur: () => {},
+	onKeyDown: () => {}
+};
 
 export default InputTextarea;

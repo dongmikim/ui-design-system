@@ -5,26 +5,39 @@ import Checkbox from "ui/Checkbox.js";
 
 # Forms
 
+```jsx react-live
+<form>
+  <FormGroup id="id" type="text" label="Id" />
+  <FormGroup id="password" type="password" label="Password" />
+  <div>
+    <Checkbox id="checkbox" label="로그인 저장" labelWith />
+  </div>
+  <Button type="submit" color="primary" text="로그인" />
+</form>
+```
+
+### Inputs
 
 ```jsx react-live
 <form>
   <FormGroup id="email" type="email" label="Email" />
   <FormGroup id="password" type="password" label="Password" />
-  <Button type="submit" color="primary" text="Submit" />
 </form>
 ```
 
-## Input Sizes
+### InputText Sizes
 
 ```jsx react-live
 <>
-<InputText size="sm" />
-<InputText />
-<InputText size="lg" />
+<InputText size="sm" placeholder="Small Size" />
+<InputText placeholder="Default Size" />
+<InputText size="lg" placeholder="Large Size"  />
 </>
 ```
 
-## InputFile
+## Custom Forms
+
+### File
 
 ```jsx react-live
 <form>
@@ -32,10 +45,54 @@ import Checkbox from "ui/Checkbox.js";
 </form>
 ```
 
-## Checkbox
+### Checkbox
 
 ```jsx react-live
 <form>
-  <Checkbox />
+  <Checkbox id="checkbox" />
+  <div className="ml-1"
+    <Checkbox id="checkbox" label="Checkbox" labelWith />
+  </div>
 </form>
 ```
+
+## API
+
+### InputText
+
+<div className="mdx-code">
+
+```jsx
+  import InputText from '~/InputText';
+```
+
+</div>
+
+| Name     | Type    | Default | Description |
+|----------|---------|---------|-------------|
+| type    | string | text   |             |
+| name    | string  |         |             |
+| disabled | boolean | false   |             |
+| required | boolean | false   |             |
+| readOnly | boolean | false   |             |
+| maxLength | number | 100   |             |
+| size     | string  |         |             |
+| placeholder    | string |   |             |
+
+### Checkbox
+
+<div className="mdx-code">
+
+```jsx
+  import Checkbox from '~/Checkbox';
+```
+
+</div>
+
+| Name     | Type    | Default | Description |
+|----------|---------|---------|-------------|
+| type    | string | checkbox   |             |
+| label    | string |    |             |
+| labelWith    | boolean | false   |             |
+| disabled | boolean | false   |             |
+| placeholder    | string |   |             |

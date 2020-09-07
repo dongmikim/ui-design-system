@@ -18,7 +18,7 @@ class Button extends Component {
       size,
       width,
       icon,
-      title,
+      iconTitle,
       ...attributes
     } = this.props;
 
@@ -28,6 +28,7 @@ class Button extends Component {
       width ? `${prefix}-w-${width}` : false,
       color ? `${prefix}-${color}` : false,
       block ? "btn-block" : false,
+      active ? "is-active" : false,
       className,
       { active, disabled: disabled }
     );
@@ -53,7 +54,7 @@ class Button extends Component {
        onClick={onClick}
        {...attributes}
      >
-       <i title={title} className={icon}>icon</i>
+       <i title={iconTitle} className={icon}></i>
      </button>  
       }
       </>

@@ -2,53 +2,86 @@ import Button from "ui/Button.js";
 
 # Button
 
-## Color
+## Examples
 
 ```jsx react-live 
 <>
-<Button text="button" />
-<Button color="primary" text="button" />
-<Button color="blue" text="button" />
+  <Button text="button" />
+  <Button text="button" color="primary" />
+  <Button text="button" color="blue" />
+  <Button text="button" color="dark" />
 </>
 ```
 
-## Size
+## Sizes
 
 ```jsx react-live 
 <>
-<Button size="xs" text="Xsmall" />
-<Button size="sm" text="Small" />
-<Button text="Medium" />
-<Button size="lg" text="Large" />
-<Button width="sm" text="MinWidth Small" />
-<Button width="md" text="MinWidth Medium" />
-<Button width="lg" text="MinWidth Large" />
+  <Button text="Xsmall" size="xs" />
+  <Button text="Small" size="sm" />
+  <Button text="Medium" />
+  <Button text="Large" size="lg" />
+  <Button text="MinWidth Small" width="sm"  />
+  <Button text="MinWidth Medium" width="md"  />
+  <Button text="MinWidth Large" width="lg" />
 </>
 ```
 
-## Disabled
+### Block 
+
+```jsx react-live
+<>
+  <Button text="Block Button" block />
+  <Button text="Block Button" color="primary" block />
+  <Button text="Block Button" color="dark" block />
+</>
+```
+
+## Active State
 
 ```jsx react-live 
 <>
-<Button text="Disabled" disabled />
+  <Button text="Active" active />
+  <Button text="Active" color="primary" active />
+  <Button text="Active" color="dark" active />
 </>
 ```
 
-## with icon
-
+### Disabled
 
 ```jsx react-live 
 <>
-<Button title="icon" icon="ico-heloo" />
+  <Button text="Disabled" disabled />
 </>
 ```
 
+## Icon
+
+```jsx react-live 
+<>
+  <Button icon="ico-search" iconTitle="검색" />
+</>
+```
 
 ## API
+
+### Button
+
+<div className="mdx-code">
+
+```jsx
+  import Button from '~/Button';
+```
+
+</div>
+
 | Name     | Type    | Default | Description |
 |----------|---------|---------|-------------|
+| active   | boolean | false   |             |
 | block    | boolean | false   |             |
 | color    | string  |         |             |
 | disabled | boolean | false   |             |
+| icon | string |    |             |
+| iconTitle | string |    |             |
 | size     | string  |         |             |
 | type     |         | button  |             |

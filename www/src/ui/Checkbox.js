@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './styles/style.scss';
 
-const Checkbox = (props) => {
-  const { ...inputProps } = props;
+class Checkbox extends Component {
+  render() {
+    const { id, label, labelWith } = this.props;
 
-  return (
-    <div className="form-check">
-      <input id={props.id} type="checkbox" className="form-check-input" {...inputProps} />
-      <label htmlFor={props.id} className="form-check-label">{props.label}</label>
-      {/* <span title={props.label}>{props.label}</span> */}
-    </div>
-  )
+    return (
+      <>
+        <div className={!labelWith ? "form-check" : "form-check form-check-text"}>
+          <input id={id} type="checkbox" className="form-check-input" />
+          <label for={id} className="form-check-label">
+            {label}
+          </label>
+          {/* <span title={props.label}>{props.label}</span> */}
+        </div>
+      </>
+    );
+  }
 }
 
 Checkbox.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-}
+	id: PropTypes.string,
+	label: PropTypes.string
+};
 
 export default Checkbox;
